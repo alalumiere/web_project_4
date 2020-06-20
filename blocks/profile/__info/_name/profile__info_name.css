@@ -1,0 +1,9 @@
+.profile__info_name{
+  width: 380px;
+  margin: 0;
+  padding: 0 24px 16px 0;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 56px;
+  color: #ffffff;
+}

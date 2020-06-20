@@ -1,0 +1,7 @@
+.profile__info{
+  width: 428px;
+  padding: 18px 154px 25px 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: minmax(50% 50%);
+}
