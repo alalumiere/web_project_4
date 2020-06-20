@@ -1,0 +1,7 @@
+.content{
+  max-width: 882px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
