@@ -1,0 +1,13 @@
+@import url('./__logo/header__logo.css');
+@import url('./__line/header__line.css');
+
+.header{
+  width: 882px;
+  height: 74px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  padding: 45px 0 40px;
+  margin: 0 auto;
+}
