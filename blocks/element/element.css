@@ -1,0 +1,15 @@
+@import url('./__card/element__card.css');
+@import url('./__card/_img/element__card_img.css');
+@import url('./__card/_title/element__card_title.css');
+@import url('./__card/_heart/element__card_heart.css');
+
+.element{
+  display: grid;
+  grid-template-columns: repeat(3, 282px);
+  grid-template-rows: repeat(2, 362px);
+  grid-column-gap: 18px;
+  grid-row-gap: 21px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
