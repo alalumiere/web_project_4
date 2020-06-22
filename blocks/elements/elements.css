@@ -4,3 +4,23 @@
   margin: 0 auto;
   padding-bottom: 66px;
 }
+
+@media screen and (max-width: 1024px) {
+  .elements{
+    max-width: 1024px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .elements{
+    max-width: 768px;
+    padding-bottom: 57px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .elements{
+    max-width: 282px;
+    padding-bottom: 48px;
+  }
+}

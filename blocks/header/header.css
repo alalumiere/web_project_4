@@ -2,7 +2,7 @@
 @import url('./__line/header__line.css');
 
 .header{
-  width: 882px;
+  max-width: 882px;
   height: 74px;
   position: relative;
   display: flex;
@@ -10,4 +10,24 @@
   justify-self: center;
   padding: 45px 0 40px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .header{
+    max-width: 725px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header{
+    max-width: 425px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header{
+    max-width: 320px;
+    padding-top: 28px;
+    padding-bottom: 42px;
+  }
 }

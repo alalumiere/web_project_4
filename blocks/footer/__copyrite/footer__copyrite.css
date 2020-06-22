@@ -7,3 +7,24 @@
   margin: 0;
   padding-bottom: 60px;
 }
+
+@media screen and (max-width: 1024px) {
+  .footer__copyrite{
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__copyrite{
+    padding-bottom: 48px;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer__copyrite{
+    font-size: 14px;
+    line-height: 17px;
+    padding-bottom: 36px;
+  }
+}

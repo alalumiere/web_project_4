@@ -1,6 +1,24 @@
 @import url('./__copyrite/footer__copyrite.css');
 
 .footer{
-  width: 882px;
+  max-width: 882px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer{
+    max-width: 1024px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer{
+    max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer{
+    max-width: 282px;
+  }
 }

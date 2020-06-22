@@ -7,3 +7,12 @@
   color: #ffffff;
   margin: 0;
 }
+
+@media screen and (max-width: 425px) {
+  .profile__info_explorer{
+    max-width: 280px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+  }
+}

@@ -2,6 +2,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    width: 282px;
+    max-width: 282px;
     height: 361px;
 }
+
+@media screen and (max-width: 768px) {
+    .element__card{
+      margin: 0 auto;
+    }
+  }

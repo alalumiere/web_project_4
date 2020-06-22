@@ -1,5 +1,28 @@
 .header__logo{
-  width: 173px;
+  max-width: 173px;
   height: 33px;
   align-self: start;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__logo{
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__logo{
+    max-width: 150px;
+    height: 45px;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header__logo{
+    max-width: 126px;
+    height: 56px;
+    padding-top: 28px;
+    padding-left: 27px;
+  }
 }

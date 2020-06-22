@@ -13,3 +13,37 @@
   margin: 0;
   list-style: none;
 }
+
+@media screen and (max-width: 900px) {
+  .element{
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .element{
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 645px) {
+  .element{
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .element{
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 20px;
+  }
+}
