@@ -9,7 +9,7 @@
 
 ### Description
 
-Project 4 is a responsive website with the ability to change the user's profile utelizing JavaScript.
+Project 4 is a responsive website with the ability to change the user's profile utilizing JavaScript.
 
 ### Figma
 
