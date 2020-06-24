@@ -25,4 +25,5 @@ Project 4 is a responsive website with the ability to change the user's profile 
 * BEM Methodology
 
 **Link to Page**
+
 [Checkout **Project 4: "Around The U.S"** here]
