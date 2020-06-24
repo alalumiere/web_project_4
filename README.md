@@ -26,4 +26,4 @@ Project 4 is a responsive website with the ability to change the user's profile 
 
 **Link to Page**
 
-[Checkout **Project 4: "Around The U.S"** here]
+Checkout **Project 4: "Around The U.S"** here
