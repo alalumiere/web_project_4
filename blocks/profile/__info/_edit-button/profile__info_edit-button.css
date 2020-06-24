@@ -8,6 +8,7 @@
   border: none; 
   opacity: 1;
   transition: opacity .7s ease-out;
+  cursor: pointer;
 }
 
 .profile__info_edit-button:hover{

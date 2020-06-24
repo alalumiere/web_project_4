@@ -2,15 +2,27 @@
 
 ### Overview
 
+* Description
 * Figma
-* Images
+* Technologies used
+* Link to page
+
+**Description**
+
+Project 4 is a responsive website with the ability to change the user's profile utelizing JavaScript.
 
 **Figma**
 
 * [Link to the project in Figma](https://www.figma.com/file/mUgu8OSHWE0M6p6vfwmdu9/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
 
-**Images**
+**Technologies Used**
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
+* HTML
+* CSS (grid layout, transitions)
+* JavaScript
+* Media Queries
+* Figma
+* BEM Methodology
 
-Have fun with JavaScript!
+**Link to Page**
+[Checkout **Project 4: "Around The U.S"** here]

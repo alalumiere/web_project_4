@@ -16,10 +16,10 @@
       <img src="./images/cousteau.jpg" alt="Jacques Cousteau" class="profile__avitar">
       <div class="profile__info">
         <h1 class="profile__info_name">Jacques Cousteau</h1>
-        <input type="button" class="profile__info_edit-button">
+        <button class="profile__info_edit-button"></button>
         <p class="profile__info_explorer">Explorer</p> 
       </div>
-      <input type="button" class="profile__add-button">
+      <button class="profile__add-button"></button>
     </section>
     <section class="elements">
       <ul class="element">
@@ -53,5 +53,15 @@
   <footer class="footer">
     <h2 class="footer__copyrite">© 2020 Around The U.S.</h2>
   </footer>
+  <div class="popup">      
+    <form action="#" class="form">
+      <img src="./images/closeicon.png" alt="Close" class="popup__close-button">
+      <h2 class="form__title">Edit profile</h2>
+      <input class="form__name" type="text" name="name" value="Jacques Cousteau">
+      <input class="form__description" type="text" name="description" value="Explorer">
+      <button class="form__submit-button" type='submit' >Save</button>
+    </form>
+  </div>
+<script src="./script.js"></script> 
 </body>
 </html>
