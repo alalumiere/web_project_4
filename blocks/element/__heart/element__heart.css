@@ -1,0 +1,12 @@
+.element__heart{
+  background-image: url('../../../images/heart.png');
+  position: absolute;
+  bottom: 30px;
+  right: 18px;
+  width: 21px;
+  height: 18px;
+  border: none;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: #ffffff;
+}

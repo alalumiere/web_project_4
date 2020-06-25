@@ -2,9 +2,10 @@
   background-image: url('../../../images/addbutton.png');
   background-color: transparent;
   background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #ffffff;
   height: 50px;
   width: 150px;
-  border: none;
   margin-top: 35px;
   opacity: 1;
   transition: opacity .7s ease-out;
@@ -18,22 +19,21 @@
 @media screen and (max-width: 900px) {
   .profile__add-button{
     width: 200px;
-    background-size: 200px 50px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .profile__add-button{
     margin-top: 25px;
-    width: 200px;
-    background-size: 200px 50px;
+    width: 282x;
+    background-size: 20px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .profile__add-button{
     width: 282px;
-    background-size: 282px 50px;
-    margin-top: 36px;
+    background-size: 16px;
+    margin-top: 0;
   }
 }

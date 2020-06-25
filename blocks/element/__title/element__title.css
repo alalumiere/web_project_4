@@ -1,4 +1,4 @@
-.element__card_title{
+.element__title{
   font-size: 24px;
   font-weight: 900;
   line-height: 29px;
@@ -6,10 +6,6 @@
   color: #000000;
   margin: 0;
   grid-column: 1;
-  background-image: url('../../../../images/heart.png');
-  background-repeat: no-repeat;
-  background-position: right;
-  background-origin: content-box;
   padding: 25px 15px 25px 21px;
   border-radius: 0 0 10px 10px;
 }

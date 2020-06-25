@@ -1,9 +1,10 @@
 .element__card{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    max-width: 282px;
-    height: 361px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 282px;
+  height: 361px;
 }
 
 @media screen and (max-width: 768px) {
