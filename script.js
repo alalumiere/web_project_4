@@ -17,13 +17,7 @@ function togglepopUp() {
   closeButton.addEventListener('click', () => {
     togglepopUp();
 
-    if(popUp.classList.includes('popup_open')) {
-    
-      inputName.value = profileName.textContent;
-      inputDescription.value = profileDescription.textContent;
-    
-    }
-    });
+});
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();

@@ -1,11 +1,18 @@
 .profile__explorer{
-  width: 318px;
+  max-width: 318px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
   line-height: 22px;
   color: #ffffff;
   margin: 0;
+}
+
+.profile__explorer:hover{
+  overflow: visible;
 }
 
 @media screen and (max-width: 425px) {
