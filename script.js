@@ -34,16 +34,12 @@ profileEditButton.addEventListener('click', () => {
   profileCloseButton.addEventListener('click', () => {
     togglepopUp(editProfileModal);
 
-<<<<<<< HEAD
-});
-=======
     if(editProfileModal.classList.includes('editProfileModal')) {
     
       inputName.value = profileName.textContent;
       inputDescription.value = profileDescription.textContent;
     }
   });
->>>>>>> develop
 
   editProfileform.addEventListener('submit', (e) => {
   e.preventDefault();
