@@ -1,0 +1,8 @@
+@import url('./__image/figure__image.css');
+@import url('./__figcaption/figure__figcaption.css');
+
+.figure{ 
+  margin: 0;
+  position: relative;
+  box-shadow: 0 0 25px rgba(0, 0, 0, .15);
+}

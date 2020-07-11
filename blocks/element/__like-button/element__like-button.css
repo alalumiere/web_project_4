@@ -1,4 +1,4 @@
-.element__heart{
+.element__like-button{
   background-image: url('../../../images/heart.png');
   position: absolute;
   bottom: 30px;
@@ -6,7 +6,14 @@
   width: 21px;
   height: 18px;
   border: none;
+  outline: transparent;
   background-repeat: no-repeat;
   cursor: pointer;
   background-color: #ffffff;
+  opacity: 1;
+  transition: opacity .7s ease-out;
+}
+
+.element__like-button:hover{
+  opacity: .6;
 }

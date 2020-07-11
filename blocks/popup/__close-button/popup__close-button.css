@@ -6,9 +6,10 @@
   border: none;
   align-content: center;
   background-repeat: no-repeat;
-  background-color: #000000;
+  background-color: transparent;
   position: absolute;
   top: -48px;
   right: -40px;
   cursor: pointer;
+  outline: transparent;
 }
