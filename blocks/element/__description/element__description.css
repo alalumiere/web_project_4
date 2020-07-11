@@ -1,0 +1,7 @@
+.element__description{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+  background-color: #ffffff;
+  border-radius: 0 0 10px 10px;
+}

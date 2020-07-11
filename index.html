@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
-    <title>Around The U.S.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Around The U.S.</title>
 </head>
 <body class="page">
   <header class="header">
@@ -21,44 +21,14 @@
       <button class="profile__add-button"></button>
     </section>
     <section class="elements">
-      <ul class="element">
-        <li class="element__card">
-          <img src="./images/minnewaska.jpg" alt="Minnewaska State Park Preserve, Gardiner, USA" class="element__img">
-          <h2 class="element__title">Minnewaska</h2>
-          <button class="element__heart" type="button"></button>
-        </li>
-        <li class="element__card">
-          <img src="./images/glacierbay.jpg" alt="Glacier Bay, Alaska, USA" class="element__img">
-          <h2 class="element__title">Glacier Bay</h2>
-          <button class="element__heart" type="button"></button>
-        </li>
-        <li class="element__card">
-          <img src="./images/angelslanding.jpg" alt="Angels Landing, Zion National Park, Utah, USA" class="element__img">
-          <h2 class="element__title">Angels Landing</h2>
-          <button class="element__heart" type="button"></button>
-        </li>
-        <li class="element__card">
-          <img src="./images/guadalupemountains.jpg" alt="Guadalupe Mountains National Park, Salt Flat, TX, USA" class="element__img">
-          <h2 class="element__title">Guadalupe</h2>
-          <button class="element__heart" type="button"></button>
-        </li>
-        <li class="element__card">
-          <img src="./images/badlands.jpg" alt="Badlands National Park, South Dakota, USA" class="element__img">
-          <h2 class="element__title">Badlands</h2>
-          <button class="element__heart" type="button"></button>
-        </li>
-        <li class="element__card">
-          <img src="./images/pointreyes.jpg" alt="Point Reyes, California, USA" class="element__img">
-          <h2 class="element__title">Point Reyes</h2>
-          <button class="element__heart" type="button"></button>
-        </li>
+      <ul class="element">  
       </ul>
     </section>
   </main>
   <footer class="footer">
     <h2 class="footer__copyrite">© 2020 Around The U.S.</h2>
   </footer>
-  <div class="popup">      
+  <div class="popup popup__type_edit-profile">      
     <form action="#" class="form">
       <button class="popup__close-button" type="button"></button>
       <h2 class="form__title">Edit profile</h2>
@@ -67,6 +37,32 @@
       <button class="form__submit-button" type='submit' >Save</button>
     </form>
   </div>
+  <div class="popup popup__type_add-element">      
+    <form action="#" class="form">
+      <button class="popup__close-button" type="button"></button>
+      <h2 class="form__title">New place</h2>
+      <input class="form__name" type="text" name="name" value="Title">
+      <input class="form__description" type="url" name="link" value="Image link">
+      <button class="form__submit-button" type='submit' >Save</button>
+    </form>
+  </div>
+  <div class="popup popup__type_image">      
+    <figure class="figure">
+      <button class="popup__close-button" type="button"></button>
+      <img class="figure__image" src="" alt="">
+      <figcaption class="figure__figcaption"></figcaption>
+    </figure>
+  </div>
+  <template class="element__template">
+    <li class="element__card">
+      <button class="element__delete-button" type="button"></button>
+      <div class="element__img"></div> 
+      <div class="element__description">
+        <h2 class="element__title"></h2>
+        <button class="element__like-button " type="button"></button>
+      </div>
+    </li>
+  </template>
 <script src="./script.js"></script> 
 </body>
 </html>

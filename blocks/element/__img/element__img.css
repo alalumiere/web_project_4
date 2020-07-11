@@ -1,7 +1,11 @@
 .element__img{
   width: 282px;
   height: 282px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   grid-column: 1 / 2;
   grid-row: 1;
   border-radius: 10px 10px 0 0;
+  cursor: pointer;
 }

@@ -11,4 +11,5 @@
   top: -48px;
   right: -40px;
   cursor: pointer;
+  outline: transparent;
 }
