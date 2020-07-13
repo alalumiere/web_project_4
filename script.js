@@ -114,7 +114,7 @@ function createCard(data) {
 
   elementImage.addEventListener('click', () => {
     togglePopUp(imageModal);
-    figureImage.src = `${data.link}`,
+    figureImage.src = `${data.link}`;
     figureImage.alt = "";
     figureCaption.textContent = data.name;
     });
@@ -122,7 +122,7 @@ function createCard(data) {
 list.prepend(cardElement);  
 };
 
-initialCards.forEach(data => createCard(data));
+initialCards.forEach((data) => createCard(data));
 
 addElementSubmitButton.addEventListener('click', () => {  
 
