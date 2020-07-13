@@ -1,5 +1,6 @@
 .profile__name{
   max-width: 380px;
+  height: 43px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -15,11 +16,26 @@
   overflow: visible;
 }
 
+@media screen and (max-width: 900px) {
+  .profile__name{
+    padding: 0 24px 0 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile__name{
+    padding: 0 24px 16px 0;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .profile__name{
     max-width: 201px;
-    padding: 0 17.25px 14px 40px;
+    height: 38px;
+    padding-right: 12px;
+    padding-bottom: 14px;
     font-size: 22px;
     font-style: normal;
+    align-self: flex-end;
   }
 }

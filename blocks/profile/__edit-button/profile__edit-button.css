@@ -2,6 +2,7 @@
   background-image: url('../../../images/editbutton.png');
   background-color: transparent;
   background-repeat: no-repeat;
+  background-size: cover;
   height: 24px;
   width: 24px;
   margin-top: 17px;
@@ -19,6 +20,7 @@
   .profile__edit-button{
     height: 21px;
     width: 21px;
+    background-size: cover;
   }
 }
 
@@ -28,5 +30,8 @@
     height: 18px;
     margin-top: 0;
     margin-bottom: 14px;
+    align-self: flex-end;
+    padding: 0;
+    background-size: cover;
   }
 }

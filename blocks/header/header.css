@@ -20,13 +20,17 @@
 
 @media screen and (max-width: 768px) {
   .header{
+    width: 85vw;
     max-width: 425px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .header{
+    width: 100%;
     max-width: 320px;
-    padding-top: 28px;
+    height: 56px;
+    margin: 0 auto;
+    padding: 28px 0 0 0;
   }
 }

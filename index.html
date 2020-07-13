@@ -15,7 +15,7 @@
       <img src="./images/cousteau.jpg" alt="Jacques Cousteau" class="profile__avitar">
       <div class="profile__info">
         <h1 class="profile__name">Jacques Cousteau</h1>
-        <button class="profile__edit-button"></button>
+        <button class="profile__edit-button" type="button" aria-label="Edit profile"></button>
         <p class="profile__explorer">Explorer</p> 
       </div>
       <button class="profile__add-button"></button>
@@ -28,38 +28,38 @@
   <footer class="footer">
     <h2 class="footer__copyrite">© 2020 Around The U.S.</h2>
   </footer>
-  <div class="popup popup__type_edit-profile">      
+  <div class="popup popup_type_edit-profile">      
     <form action="#" class="form">
-      <button class="popup__close-button" type="button"></button>
+      <button class="popup__close-button" aria-label="Close popup" type="reset"></button>
       <h2 class="form__title">Edit profile</h2>
-      <input class="form__name" type="text" name="name" value="Jacques Cousteau">
-      <input class="form__description" type="text" name="description" value="Explorer">
-      <button class="form__submit-button" type='submit' >Save</button>
+      <input class="form__name" type="text" name="name" placeholder="Jacques Cousteau">
+      <input class="form__description" type="text" name="description" placeholder="Explorer">
+      <button class="form__submit-button" type="submit" aria-label="Submit profile" >Save</button>
     </form>
   </div>
-  <div class="popup popup__type_add-element">      
+  <div class="popup popup_type_add-element">      
     <form action="#" class="form">
-      <button class="popup__close-button" type="button"></button>
+      <button class="popup__close-button" type="reset" aria-label="Close popup"></button>
       <h2 class="form__title">New place</h2>
-      <input class="form__name" type="text" name="name" value="Title">
-      <input class="form__description" type="url" name="link" value="Image link">
-      <button class="form__submit-button" type='submit' >Save</button>
+      <input class="form__name" type="text" name="name" placeholder="Title">
+      <input class="form__description" type="url" name="link" placeholder="Image link">
+      <button class="form__submit-button" type="submit" aria-label="Submit place">Save</button>
     </form>
   </div>
-  <div class="popup popup__type_image">      
+  <div class="popup popup_type_image">      
     <figure class="figure">
-      <button class="popup__close-button" type="button"></button>
-      <img class="figure__image" src="" alt="">
+      <button class="popup__close-button" type="reset" aria-label="Close popup"></button>
+      <img class="figure__image" src="#" alt="#">
       <figcaption class="figure__figcaption"></figcaption>
     </figure>
   </div>
   <template class="element__template">
     <li class="element__card">
-      <button class="element__delete-button" type="button"></button>
+      <button class="element__delete-button" type="button" aria-label="Delete image"></button>
       <div class="element__img"></div> 
       <div class="element__description">
         <h2 class="element__title"></h2>
-        <button class="element__like-button " type="button"></button>
+        <button class="element__like-button "type="button" aria-label="Like image"></button>
       </div>
     </li>
   </template>

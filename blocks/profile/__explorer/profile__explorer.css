@@ -9,17 +9,35 @@
   line-height: 22px;
   color: #ffffff;
   margin: 0;
+  align-self: flex-end;
 }
 
 .profile__explorer:hover{
   overflow: visible;
+} 
+
+@media screen and (max-width: 900px) {
+  .profile__explorer{
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile__explorer{
+    width: 100%;
+    max-width: 768px;
+    align-self: flex-end;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 425px) {
   .profile__explorer{
+    width: 100%;
     max-width: 280px;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
+    align-self: flex-end;
   }
 }
