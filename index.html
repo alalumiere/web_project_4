@@ -29,21 +29,21 @@
     <h2 class="footer__copyrite">© 2020 Around The U.S.</h2>
   </footer>
   <div class="popup popup_type_edit-profile">      
-    <form action="#" class="form">
+    <form action="#" class="form popup__form">
       <button class="popup__close-button" aria-label="Close popup" type="reset"></button>
       <h2 class="form__title">Edit profile</h2>
-      <input class="form__name" type="text" name="name" placeholder="Jacques Cousteau">
-      <input class="form__description" type="text" name="description" placeholder="Explorer">
-      <button class="form__submit-button" type="submit" aria-label="Submit profile" >Save</button>
+      <input class="form__name popup__input popup__input_type_error" type="text" name="name" placeholder="Jacques Cousteau" required>
+      <input class="form__description popup__input popup__input_type_error" type="text" name="description" placeholder="Explorer" required>
+      <button class="form__submit-button popup__button popup__button_disabled" type="submit" aria-label="Submit profile" >Save</button>
     </form>
   </div>
   <div class="popup popup_type_add-element">      
-    <form action="#" class="form">
+    <form action="#" class="form popup__form">
       <button class="popup__close-button" type="reset" aria-label="Close popup"></button>
       <h2 class="form__title">New place</h2>
-      <input class="form__name" type="text" name="name" placeholder="Title">
-      <input class="form__description" type="url" name="link" placeholder="Image link">
-      <button class="form__submit-button" type="submit" aria-label="Submit place">Save</button>
+      <input class="form__name popup__input popup__input_type_error" type="text" name="name" placeholder="Title" required>
+      <input class="form__description popup__input popup__input_type_error" type="url" name="link" placeholder="Image link" required>
+      <button class="form__submit-button popup__button popup__button_disabled" type="submit" aria-label="Submit place">Save</button>
     </form>
   </div>
   <div class="popup popup_type_image">      
@@ -63,6 +63,7 @@
       </div>
     </li>
   </template>
-<script src="./script.js"></script> 
+  <script src="./validation.js" defer></script>
+<script src="./script.js" defer></script> 
 </body>
 </html>
