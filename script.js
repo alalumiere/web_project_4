@@ -21,19 +21,37 @@ const profileDescription = document.querySelector('.profile__explorer');
 const addImage = addElementModal.querySelector(".form__description");
 const addTitle = addElementModal.querySelector(".form__name");
 
-
+//Toggle popups
 function togglePopUp(modal) {
   modal.classList.toggle('popup_open');
 }
 
+function outsideClick(closePop) {
+  
+  closePop.addEventListener('click', (e) => {
+    if (e.target.classList.contains("popup")) {
+      closePop.classList.remove("popup_open");
+
+    }
+  });
+
+  window.addEventListener("keyup", (e) => {
+    if (e.key === "Escape") {
+      closePop.classList.remove("popup_open");
+    }
+  })
+};
+
+
 profileEditButton.addEventListener('click', () => {
   togglePopUp(editProfileModal);
+  outsideClick(editProfileModal);
 })
   
   profileCloseButton.addEventListener('click', () => {
     togglePopUp(editProfileModal);
-
-    if(editProfileModal.classList.includes('editProfileModal')) {
+   
+    if (editProfileModal.classList.includes('editProfileModal')) {
     
       inputName.value = profileName.textContent;
       inputDescription.value = profileDescription.textContent;
@@ -47,18 +65,22 @@ profileEditButton.addEventListener('click', () => {
   profileDescription.textContent = inputDescription.value;
 
   togglePopUp(editProfileModal); 
+  
 });
 
 profileAddButton.addEventListener('click', () => {
   togglePopUp(addElementModal);
+  outsideClick(addElementModal);
 });
 
 closeAddElementButton.addEventListener('click', () => {
   togglePopUp(addElementModal);
+  
 });
 
 closeImageButton.addEventListener('click', () => {
   togglePopUp(imageModal);
+ 
 });
 
 const initialCards = [
@@ -114,6 +136,7 @@ function createCard(data) {
 
   elementImage.addEventListener('click', () => {
     togglePopUp(imageModal);
+    outsideClick(imageModal);
     figureImage.src = `${data.link}`;
     figureImage.alt = "";
     figureCaption.textContent = data.name;
