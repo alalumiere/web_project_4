@@ -1,5 +1,4 @@
-
-function showErrorMessage(input, form, ...rest) {
+function showErrorMessage(input, form, rest) {
   const error = document.querySelector('#' + input.id + '-error');
   const { errorClass, inputErrorClass } = rest;
   error.textContent = input.validationMessage;
@@ -7,7 +6,6 @@ function showErrorMessage(input, form, ...rest) {
   error.classList.add(errorClass);
   input.classList.add(inputErrorClass);
 };
-
 
 function hideErrorMessage(input, form, rest) {
     const error = document.querySelector('#' + input.id + '-error');
