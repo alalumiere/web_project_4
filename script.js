@@ -52,7 +52,6 @@ profileEditButton.addEventListener('click', () => {
     togglePopUp(editProfileModal);
    
     if (editProfileModal.classList.includes('editProfileModal')) {
-    
       inputName.value = profileName.textContent;
       inputDescription.value = profileDescription.textContent;
     }
