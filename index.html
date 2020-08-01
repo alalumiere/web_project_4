@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
   <title>Around The U.S.</title>
 </head>
+
 <body class="page">
   <header class="header">
     <img class="header__logo" src="./images/logo.svg" alt="Around The U.S.">
-  </header>  
+  </header>
   <main class="content">
     <section class="profile">
       <img src="./images/cousteau.jpg" alt="Jacques Cousteau" class="profile__avitar">
       <div class="profile__info">
         <h1 class="profile__name">Jacques Cousteau</h1>
         <button class="profile__edit-button" type="button" aria-label="Edit profile"></button>
-        <p class="profile__explorer">Explorer</p> 
+        <p class="profile__explorer">Explorer</p>
       </div>
       <button class="profile__add-button"></button>
     </section>
     <section class="elements">
-      <ul class="element">  
+      <ul class="element">
       </ul>
     </section>
   </main>
   <footer class="footer">
     <h2 class="footer__copyrite">© 2020 Around The U.S.</h2>
   </footer>
-  <div class="popup popup_type_edit-profile">      
+  <div class="popup popup_type_edit-profile">
     <form action="#" class="form popup__form">
       <button class="popup__close-button" aria-label="Close popup" type="reset"></button>
       <h2 class="form__title">Edit profile</h2>
-      <input id="profile-name" class="form__name popup__input" type="text" name="name" placeholder="Jacques Cousteau" required minlength="2" maxlength="40">
+      <input id="profile-name" class="form__name popup__input" type="text" name="name" value="Jacques Cousteau" required minlength="2" maxlength="40">
       <span id="profile-name-error" class="popup__error"></span>
-      <input id="profile-text" class="form__description popup__input" type="text" name="description" placeholder="Explorer" required minlength="2" maxlength="200">
+      <input id="profile-text" class="form__description popup__input" type="text" name="description" value="Explorer" required minlength="2" maxlength="200">
       <span id="profile-text-error" class="popup__error"></span>
       <button class="form__submit-button popup__button" type="submit" aria-label="Submit profile">Save</button>
     </form>
   </div>
-  <div class="popup popup_type_add-element">      
+  <div class="popup popup_type_add-element">
     <form action="#" class="form popup__form">
       <button class="popup__close-button" type="reset" aria-label="Close popup"></button>
       <h2 class="form__title">New place</h2>
-      <input id="card-title" class="form__name popup__input" type="text" name="name" placeholder="Title" required minlength="1" maxlength="30">
+      <input id="card-title" class="form__name popup__input" type="text" name="name" placeholder="Title" required
+        minlength="1" maxlength="30">
       <span id="card-title-error" class="popup__error"></span>
-      <input id="card-url" class="form__description popup__input" type="url" name="link" placeholder="Image link" required>
+      <input id="card-url" class="form__description popup__input" type="url" name="link" placeholder="Image link"
+        required>
       <span id="card-url-error" class="popup__error"></span>
       <button class="form__submit-button popup__button" type="submit" aria-label="Submit place">Save</button>
     </form>
   </div>
-  <div class="popup popup_type_image">      
+  <div class="popup popup_type_image">
     <figure class="figure">
       <button class="popup__close-button" type="reset" aria-label="Close popup"></button>
       <img class="figure__image" src="#" alt="#">
@@ -60,14 +64,15 @@
   <template class="element__template">
     <li class="element__card">
       <button class="element__delete-button" type="button" aria-label="Delete image"></button>
-      <div class="element__img"></div> 
+      <div class="element__img"></div>
       <div class="element__description">
         <h2 class="element__title"></h2>
         <button class="element__like-button" type="button" aria-label="Like image"></button>
       </div>
     </li>
   </template>
-  <script src="./validation.js" defer></script>
-<script src="./script.js" defer></script> 
+  <script src="./scripts/validation.js" defer></script>
+  <script src="./scripts/script.js" defer></script>
 </body>
+
 </html>
