@@ -25,21 +25,19 @@ const list = document.querySelector('.element');
 const elementTemplate = document.querySelector('.element__template').content.querySelector('.element__card');
 
 //Open and Close popups
-function closeOpenedModals(e) {
-  closeModal(editProfileModal);
-  closeModal(addElementModal);
-  closeModal(imageModal);
-}
-
 function escapeToCloseModal(e) {
   if (e.key === "Escape") {
-    closeOpenedModals();
+    closeModal(editProfileModal);
+    closeModal(addElementModal);
+    closeModal(imageModal);
   }
 }
 
 function clickToCloseModal(e) {
   if (e.type === "click" && e.target.classList.contains("popup_open")) {
-    closeOpenedModals();
+    closeModal(editProfileModal);
+    closeModal(addElementModal);
+    closeModal(imageModal);
   }
 }
 
@@ -54,6 +52,14 @@ function closeModal(modal) {
   document.removeEventListener('keyup', escapeToCloseModal);
   document.removeEventListener('click', clickToCloseModal);
 }
+
+editProfileSubmitButton.addEventListener('click', () => {
+  closeModal(editProfileModal);
+})
+
+addElementSubmitButton.addEventListener('click', () => {
+  closeModal(addElementModal);
+})
 
 profileEditButton.addEventListener('click', () => {
   openModal(editProfileModal);
@@ -72,7 +78,7 @@ editProfileform.addEventListener('submit', (e) => {
   profileName.textContent = inputName.value;
   profileDescription.textContent = inputDescription.value;
 
-  closeOpenedModals();
+  closeModal(editProfileform);
 })
 
 profileAddButton.addEventListener('click', () => {
@@ -157,5 +163,5 @@ initialCards.forEach((data) => createCard(data));
 
 addElementForm.addEventListener('submit', () => {
   newCard({ name: addTitle.value, link: addImage.value });
-  closeOpenedModals();
+  closeModal(initialCards);
 })
