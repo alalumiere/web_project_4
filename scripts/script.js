@@ -160,5 +160,5 @@ initialCards.forEach((data) => createCard(data));
 
 addElementForm.addEventListener('submit', () => {
   newCard({ name: addTitle.value, link: addImage.value });
-  closeModal(initialCards);
+  closeModal(addElementForm);
 })
