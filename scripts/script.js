@@ -27,17 +27,14 @@ const elementTemplate = document.querySelector('.element__template').content.que
 //Open and Close popups
 function escapeToCloseModal(e) {
   if (e.key === "Escape") {
-    closeModal(editProfileModal);
-    closeModal(addElementModal);
-    closeModal(imageModal);
+    const openedModal = document.querySelector('.popup_open');
+    closeModal(openedModal);
   }
 }
 
 function clickToCloseModal(e) {
   if (e.type === "click" && e.target.classList.contains("popup_open")) {
-    closeModal(editProfileModal);
-    closeModal(addElementModal);
-    closeModal(imageModal);
+    closeModal(e.target);
   }
 }
 
