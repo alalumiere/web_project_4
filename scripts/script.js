@@ -1,3 +1,7 @@
+import FormValidator from './FormValidator.js';
+import Card from './Card.js';
+
+
 //wrappers
 const editProfileModal = document.querySelector('.popup_type_edit-profile');
 const addElementModal = document.querySelector('.popup_type_add-element');
@@ -22,7 +26,22 @@ const profileDescription = document.querySelector('.profile__explorer');
 const addImage = addElementModal.querySelector(".form__description");
 const addTitle = addElementModal.querySelector(".form__name");
 const list = document.querySelector('.element');
-const elementTemplate = document.querySelector('.element__template').content.querySelector('.element__card');
+// const elementTemplate = document.querySelector('.element__template').content.querySelector('.element__card');
+
+const defaultConfig = {
+  formSelector: ".popup__form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button",
+  inactiveButtonClass: "form__submit-button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible"
+}
+
+const editFormValidator = new FormValidator(defaultConfig, editProfileform);
+const addFormValidator = new FormValidator(defaultConfig, addElementForm);
+
+editFormValidator.enableValidation();
+addFormValidator.enableValidation();
 
 //Open and Close popups
 function escapeToCloseModal(e) {
@@ -90,8 +109,7 @@ closeImageButton.addEventListener('click', () => {
   closeModal(imageModal);
 })
 
-const initialCards = [
-  {
+const initialCards = [{
     name: "Minnewaska",
     link: "./images/minnewaska.jpg"
   },
@@ -118,47 +136,50 @@ const initialCards = [
 ]
 
 //Create a New Card
-function createCard(data) {
+// function createCard(data) {
 
-  const cardElement = elementTemplate.cloneNode(true);
-  const elementImage = cardElement.querySelector('.element__img');
-  const elementTitle = cardElement.querySelector('.element__title');
-  const elementLikeButton = cardElement.querySelector('.element__like-button');
-  const elementDeleteButton = cardElement.querySelector('.element__delete-button');
-  const figureImage = imageModal.querySelector('.figure__image');
-  const figureCaption = imageModal.querySelector('.figure__figcaption');
+//   const cardElement = elementTemplate.cloneNode(true);
+//   const elementImage = cardElement.querySelector('.element__img');
+//   const elementTitle = cardElement.querySelector('.element__title');
+//   const elementLikeButton = cardElement.querySelector('.element__like-button');
+//   const elementDeleteButton = cardElement.querySelector('.element__delete-button');
+//   const figureImage = imageModal.querySelector('.figure__image');
+//   const figureCaption = imageModal.querySelector('.figure__figcaption');
 
-  elementTitle.textContent = data.name;
-  elementImage.style.backgroundImage = 'url(' + data.link + ')';
+//   elementTitle.textContent = data.name;
+//   elementImage.style.backgroundImage = 'url(' + data.link + ')';
 
-  elementDeleteButton.addEventListener('click', () => {
-    cardElement.remove();
-  })
+//   elementDeleteButton.addEventListener('click', () => {
+//     cardElement.remove();
+//   })
 
-  elementLikeButton.addEventListener('click', () => {
-    elementLikeButton.classList.toggle('element__like-button_filled');
-  })
+//   elementLikeButton.addEventListener('click', () => {
+//     elementLikeButton.classList.toggle('element__like-button_filled');
+//   })
 
-  elementImage.addEventListener('click', () => {
-    openModal(imageModal);
-    figureImage.src = `${data.link}`;
-    figureImage.alt = "";
-    figureCaption.textContent = data.name;
-  })
-  return cardElement;
-}
+//   elementImage.addEventListener('click', () => {
+//     openModal(imageModal);
+//     figureImage.src = `${data.link}`;
+//     figureImage.alt = "";
+//     figureCaption.textContent = data.name;
+//   })
+//   return cardElement;
+// }
 
 const newCard = (data) => {
-  list.prepend(createCard(data));
+  const card = new Card(data, '.element__template');
+  list.prepend(card.generateCard());
+  // list.prepend(createCard(data));
 }
 
-initialCards.forEach((data) => {
-  newCard(data);
-})
-
-initialCards.forEach((data) => createCard(data));
+initialCards.forEach((data) => newCard(data));
 
 addElementForm.addEventListener('submit', () => {
-  newCard({ name: addTitle.value, link: addImage.value });
+  newCard({
+    name: addTitle.value,
+    link: addImage.value
+  });
+
   closeModal(addElementForm);
+
 })
