@@ -1,31 +1,33 @@
+import {openModal} from "./Utils.js";
+
 const imageModal = document.querySelector('.popup_type_image');
 const figureImage = imageModal.querySelector('.figure__image');
 const figureCaption = imageModal.querySelector('.figure__figcaption');
 
-function escapeToCloseModal(e) {
-  if (e.key === "Escape") {
-    const openedModal = document.querySelector('.popup_open');
-    closeModal(openedModal);
-  }
-}
+// function escapeToCloseModal(e) {
+//   if (e.key === "Escape") {
+//     const openedModal = document.querySelector('.popup_open');
+//     closeModal(openedModal);
+//   }
+// }
 
-function clickToCloseModal(e) {
-  if (e.type === "click" && e.target.classList.contains("popup_open")) {
-    closeModal(e.target);
-  }
-}
+// function clickToCloseModal(e) {
+//   if (e.type === "click" && e.target.classList.contains("popup_open")) {
+//     closeModal(e.target);
+//   }
+// }
 
-function openModal(modal) {
-  modal.classList.add('popup_open');
-  document.addEventListener('keyup', escapeToCloseModal);
-  document.addEventListener('click', clickToCloseModal);
-}
+// function openModal(modal) {
+//   modal.classList.add('popup_open');
+//   document.addEventListener('keyup', escapeToCloseModal);
+//   document.addEventListener('click', clickToCloseModal);
+// }
 
-function closeModal(modal) {
-  modal.classList.remove('popup_open');
-  document.removeEventListener('keyup', escapeToCloseModal);
-  document.removeEventListener('click', clickToCloseModal);
-}
+// function closeModal(modal) {
+//   modal.classList.remove('popup_open');
+//   document.removeEventListener('keyup', escapeToCloseModal);
+//   document.removeEventListener('click', clickToCloseModal);
+// }
 
 class Card {
   constructor(data, elementSelector) {
@@ -52,8 +54,9 @@ class Card {
     figureCaption.textContent = this._name;
   }
 
-  _handelDeleteCard(e) {
-    e.target.closest(".element__card").remove();
+  _handelDeleteCard = () => {
+  this._card.remove();
+  this._card = null;
   }
 
   _setEventListeners() {

@@ -1,7 +1,6 @@
 import FormValidator from './FormValidator.js';
 import Card from './Card.js';
 
-
 //wrappers
 const editProfileModal = document.querySelector('.popup_type_edit-profile');
 const addElementModal = document.querySelector('.popup_type_add-element');
@@ -43,7 +42,8 @@ const addFormValidator = new FormValidator(defaultConfig, addElementForm);
 editFormValidator.enableValidation();
 addFormValidator.enableValidation();
 
-//Open and Close popups
+
+// Open and Close popups
 function escapeToCloseModal(e) {
   if (e.key === "Escape") {
     const openedModal = document.querySelector('.popup_open');
