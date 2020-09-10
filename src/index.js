@@ -1,10 +1,41 @@
 import FormValidator from './FormValidator.js';
 import Card from './Card.js';
+import PopupWithImage from './PopupWithImage.js';
+import Section from './Section.js';
+
+
+
+const imageModal = new PopupWithImage('.element__img');
+imageModal.setEventListener();
+
+new Card (
+  {
+    data: {name, link},
+    handelCardClick: (name, link) => {
+      imageModal.open(name, link)
+    },
+    'element__template'
+  }
+)
+
+const addCard = new Section({
+  data: name,
+  data: link,
+})
+
+
 
 //wrappers
-const editProfileModal = document.querySelector('.popup_type_edit-profile');
-const addElementModal = document.querySelector('.popup_type_add-element');
-const imageModal = document.querySelector('.popup_type_image');
+const editProfileModal = new PopupWithForm('.popup_type_edit-profile');
+editProfileModal.setEventListeners()
+const addElementModal = new PopupWithForm('.popup_type_add-element');
+addElementModal.setEventListeners()
+const imageModal = new PopupWithImage('.popup_type_image');
+imageModal.setEventListeners()
+
+// const editProfileModal = document.querySelector('.popup_type_edit-profile');
+// const addElementModal = document.querySelector('.popup_type_add-element');
+// const imageModal = document.querySelector('.popup_type_image');
 const editProfileform = editProfileModal.querySelector('.form');
 const addElementForm = addElementModal.querySelector('.form');
 
@@ -44,18 +75,18 @@ addFormValidator.enableValidation();
 
 
 // Open and Close popups
-function escapeToCloseModal(e) {
-  if (e.key === "Escape") {
-    const openedModal = document.querySelector('.popup_open');
-    closeModal(openedModal);
-  }
-}
+// function escapeToCloseModal(e) {
+//   if (e.key === "Escape") {
+//     const openedModal = document.querySelector('.popup_open');
+//     closeModal(openedModal);
+//   }
+// }
 
-function clickToCloseModal(e) {
-  if (e.type === "click" && e.target.classList.contains("popup_open")) {
-    closeModal(e.target);
-  }
-}
+// function clickToCloseModal(e) {
+//   if (e.type === "click" && e.target.classList.contains("popup_open")) {
+//     closeModal(e.target);
+//   }
+// }
 
 function openModal(modal) {
   modal.classList.add('popup_open');

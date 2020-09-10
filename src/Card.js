@@ -1,4 +1,5 @@
 import {openModal} from "./Utils.js";
+import PopupWithImage from "./PopupWithImage.js";
 
 const imageModal = document.querySelector('.popup_type_image');
 const figureImage = imageModal.querySelector('.figure__image');
@@ -30,10 +31,11 @@ const figureCaption = imageModal.querySelector('.figure__figcaption');
 // }
 
 class Card {
-  constructor(data, elementSelector) {
+  constructor({data, handelCardClick}, elementSelector) {
     this._name = data.name;
     this._link = data.link;
     this._elementSelector = elementSelector;
+    this._handelCardClick = handelCardClick;
   }
 
 
@@ -84,6 +86,8 @@ class Card {
 }
 
 export default Card;
+
+
 
 // function createCard(data) {
 
