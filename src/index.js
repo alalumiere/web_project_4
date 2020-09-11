@@ -1,3 +1,4 @@
+import '../pages/index.css';
 import FormValidator from './FormValidator.js';
 import Card from './Card.js';
 import PopupWithImage from './PopupWithImage.js';
@@ -5,23 +6,21 @@ import Section from './Section.js';
 
 
 
-const imageModal = new PopupWithImage('.element__img');
-imageModal.setEventListener();
+
 
 new Card (
   {
     data: {name, link},
     handelCardClick: (name, link) => {
       imageModal.open(name, link)
-    },
+    }},
     'element__template'
-  }
 )
 
-const addCard = new Section({
-  data: name,
-  data: link,
-})
+// const addCard = new Section({
+//   data: name,
+//   data: link,
+// })
 
 
 

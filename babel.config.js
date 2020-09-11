@@ -15,5 +15,7 @@ const presets = [
   ];
   
   module.exports = {
-    presets
-  };
+    presets,
+    plugins: ['@babel/plugin-proposal-class-properties']
+  }
+  
