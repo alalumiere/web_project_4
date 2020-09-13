@@ -12,10 +12,13 @@ class Popup {
     document.removeEventListener('keyup', this._handleEscClose);
   }
   _handleEscClose(e) {
-    if (e.key === "Escape") {
-        const openedModal = document.querySelector('.popup_open');
-        closeModal(openedModal);
-      }
+    if(e.which == 27) {
+      this.close();
+    }
+    // if (e.key === "Escape") {
+    //     const openedModal = document.querySelector('.popup_open');
+    //     closeModal(openedModal);
+    //   }
   }
   setEventListeners() {
     this._popupElement.addEventListener('click', (e) => {

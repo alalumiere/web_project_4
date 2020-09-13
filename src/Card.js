@@ -40,7 +40,12 @@ class Card {
 
 
   _getCardTemplate() {
-    const elementTemplate = document.querySelector(this._elementSelector).content.querySelector('.element__card');
+    const elementTemplate = document
+    .querySelector(this._elementSelector)
+    .content
+    .querySelector('.element__card')
+    .cloneNode(true);
+    
     return elementTemplate;
   }
 
