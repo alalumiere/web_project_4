@@ -9,10 +9,10 @@ import Section from './Section.js';
 
 
 //wrappers
-const editProfileModal = new PopupWithForm('.popup_type_edit-profile');
-editProfileModal.setEventListeners()
-const addElementModal = new PopupWithForm('.popup_type_add-element');
-addElementModal.setEventListeners()
+// const editProfileModal = new PopupWithForm('.popup_type_edit-profile');
+// editProfileModal.setEventListeners()
+// const addElementModal = new PopupWithForm('.popup_type_add-element');
+// addElementModal.setEventListeners()
 const imageModal = new PopupWithImage('.popup_type_image');
 imageModal.setEventListeners()
 
@@ -31,7 +31,7 @@ imageModal.setEventListeners()
 //   data: link,
 // })
 
-const list = document.querySelector('.element');
+
 
 // const editPopupSelector ='.popup_type_edit-profile';
 
@@ -58,10 +58,10 @@ editPopup.setEventListeners();
 const popupWitImage = new PopupWithImage('.popup_type_image');
 popupWitImage.setEventListeners();
 
-const addElementPopupSelector = '.popup_type_add-element';
+// const addElementPopupSelector = '.popup_type_add-element';
 
 const addElement = new PopupWithForm({
-  popupSelector: addElementPopupSelector,
+  popupSelector: '.popup_type_add-element',
   formSubmit: (data => {
     new Card (
       {
@@ -150,12 +150,14 @@ editProfileSubmitButton.addEventListener('click', () => {
 
 addElementSubmitButton.addEventListener('click', () => {
   // closeModal(addElementModal);
-  addElement.open();
+  // addElement.open();
+  PopupWithForm();
 })
 
 profileEditButton.addEventListener('click', () => {
   // openModal(editProfileModal);
-  editPopup.open();
+  // editPopup.open();
+  PopupWithForm();
 })
 
 // profileCloseButton.addEventListener('click', () => {
@@ -243,20 +245,20 @@ const initialCards = [{
 //   return cardElement;
 // }
 
-const newCard = (data) => {
-  const card = new Card(data, '.element__template');
-  list.prepend(card.generateCard());
-  // list.prepend(createCard(data));
-}
+// const newCard = (data) => {
+//   const card = new Card(data, '.element__template');
+//   list.prepend(card.generateCard());
+//   // list.prepend(createCard(data));
+// }
 
-initialCards.forEach((data) => newCard(data));
+// initialCards.forEach((data) => newCard(data));
 
-addElementForm.addEventListener('submit', () => {
-  newCard({
-    name: addTitle.value,
-    link: addImage.value
-  });
+// addElementForm.addEventListener('submit', () => {
+//   newCard({
+//     name: addTitle.value,
+//     link: addImage.value
+//   });
 
-  closeModal(addElementForm);
+//   closeModal(addElementForm);
 
-})
+// })
