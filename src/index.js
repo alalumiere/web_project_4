@@ -1,17 +1,16 @@
-import '../pages/index.css';
-import FormValidator from './FormValidator.js';
-import Card from './Card.js';
-import PopupWithForm from './PopupWithForm.js';
-import PopupWithImage from './PopupWithImage.js';
-import Section from './Section.js';
-
+import "../pages/index.css";
+import FormValidator from "./FormValidator.js";
+import Card from "./Card.js";
+import PopupWithForm from "./PopupWithForm.js";
+import PopupWithImage from "./PopupWithImage.js";
+import Section from "./Section.js";
 
 //wrappers
-// const editProfileModal = document.querySelector('.popup_type_edit-profile');
-// const addElementModal = document.querySelector('.popup_type_add-element');
-// // const imageModal = document.querySelector('.popup_type_image');
-// const editProfileform = editProfileModal.querySelector('.form');
-// const addElementForm = addElementModal.querySelector('.form');
+const editProfileModal = document.querySelector(".popup_type_edit-profile");
+const addElementModal = document.querySelector(".popup_type_add-element");
+
+const editProfileform = editProfileModal.querySelector(".form");
+const addElementForm = addElementModal.querySelector(".form");
 
 //Buttons and other DOM Elements
 // const profileEditButton = document.querySelector('.profile__edit-button');
@@ -29,12 +28,7 @@ import Section from './Section.js';
 // const profileDescription = document.querySelector('.profile__explorer');
 // const addImage = addElementModal.querySelector(".form__description");
 // const addTitle = addElementModal.querySelector(".form__name");
-// const list = document.querySelector('.element');
-
-const cardList = new Section({
-
-})
-
+const list = document.querySelector(".element");
 
 const defaultConfig = {
   formSelector: ".popup__form",
@@ -42,8 +36,8 @@ const defaultConfig = {
   submitButtonSelector: ".popup__button",
   inactiveButtonClass: "form__submit-button_disabled",
   inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__error_visible"
-}
+  errorClass: "popup__error_visible",
+};
 
 const editFormValidator = new FormValidator(defaultConfig, editProfileform);
 const addFormValidator = new FormValidator(defaultConfig, addElementForm);
@@ -51,25 +45,52 @@ const addFormValidator = new FormValidator(defaultConfig, addElementForm);
 editFormValidator.enableValidation();
 addFormValidator.enableValidation();
 
-
 // Open and Close popups
-const editPopup = new PopupWithForm('.popup_type_edit-profile');
-const addCardPopup = new PopupWithForm('.popup_type_add-element');
-const imageModal = new PopupWithImage('.popup_type_image');
+// const editPopup = new PopupWithForm(".popup_type_edit-profile");
+// const addCardPopup = new PopupWithForm(".popup_type_add-element");
+// const imageModal = new PopupWithImage(".popup_type_image");
 
-editPopup.setEventListeners();
-addCardPopup.setEventListeners();
-imageModal.setEventListeners();
+// editPopup.setEventListeners();
+// addCardPopup.setEventListeners();
+// imageModal.setEventListeners();
+const initialCards = [
+  {
+    name: "Minnewaska",
+    link: "./images/minnewaska.jpg",
+  },
+  {
+    name: "Glacier Bay",
+    link: "./images/glacierbay.jpg",
+  },
+  {
+    name: "Angels Landing",
+    link: "./images/angelslanding.jpg",
+  },
+  {
+    name: "Guadalupe",
+    link: "./images/guadalupemountains.jpg",
+  },
+  {
+    name: "Badlands",
+    link: "./images/badlands.jpg",
+  },
+  {
+    name: "Point Reyes",
+    link: "./images/pointreyes.jpg",
+  },
+];
 
-const newSection = new Section({
-  data: items,
-  renderer: (item) => {
-      const card = new Card(item, '.element__card')
+const newSection = new Section(
+  {
+    items: initialCards,
+    renderer: (item) => {
+      const card = new Card(item, ".element__template");
       const cardElement = card.generateCard();
-      defaultCardList.addItem(cardElement);
-  }
-}, elementsContainer);
-
+      newSection.addItem(cardElement);
+    },
+  },
+  list
+);
 
 // function escapeToCloseModal(e) {
 //   if (e.key === "Escape") {
@@ -136,47 +157,19 @@ const newSection = new Section({
 //   closeModal(imageModal);
 // })
 
-const initialCards = [{
-    name: "Minnewaska",
-    link: "./images/minnewaska.jpg"
-  },
-  {
-    name: "Glacier Bay",
-    link: "./images/glacierbay.jpg"
-  },
-  {
-    name: "Angels Landing",
-    link: "./images/angelslanding.jpg"
-  },
-  {
-    name: "Guadalupe",
-    link: "./images/guadalupemountains.jpg"
-  },
-  {
-    name: "Badlands",
-    link: "./images/badlands.jpg"
-  },
-  {
-    name: "Point Reyes",
-    link: "./images/pointreyes.jpg"
-  }
-]
+// const newCard = (data) => {
+//   const card = new Card(data, ".element__template");
+//   list.prepend(card.generateCard());
+// };
 
+// initialCards.forEach((data) => newCard(data));
 
-const newCard = (data) => {
-  const card = new Card(data, '.element__template');
-  list.prepend(card.generateCard());
-  
-}
+// addElementForm.addEventListener("submit", () => {
+//   newCard({
+//     name: addTitle.value,
+//     link: addImage.value,
+//   });
 
-initialCards.forEach((data) => newCard(data));
-
-addElementForm.addEventListener('submit', () => {
-  newCard({
-    name: addTitle.value,
-    link: addImage.value
-  });
-
-  closeModal(addElementForm);
-
-})
+//   closeModal(addElementForm);
+// });
+newSection.renderer();

@@ -1,28 +1,30 @@
 class Popup {
   constructor(popupSelector) {
-    this._popupElement =document.querySelector(popupSelector);
+    this._popupElement = document.querySelector(popupSelector);
     this._handleEscClose = this._handleEscClose.bind(this);
   }
   open() {
-    this._popupElement.classList.add('popup_open');
-    document.addEventListener('keyup', this._handleEscClose);
+    this._popupElement.classList.add("popup_open");
+    document.addEventListener("keyup", this._handleEscClose);
   }
   close() {
-    this._popupElement.classList.remove('popup_open');
-    document.removeEventListener('keyup', this._handleEscClose);
+    this._popupElement.classList.remove("popup_open");
+    document.removeEventListener("keyup", this._handleEscClose);
   }
   _handleEscClose(e) {
     if (e.key === "Escape") {
-       this.close();
-      }
+      this.close();
+    }
   }
   setEventListeners() {
-    this._popupElement.addEventListener('click', (e) => {
-        if(e.target.classList.contains('popup__close-button') || !e.target.closest('popup')) {
-          this.close();
-        }
-    })
-    
+    this._popupElement.addEventListener("click", (e) => {
+      if (
+        e.target.classList.contains("popup__close-button") ||
+        !e.target.closest("popup")
+      ) {
+        this.close();
+      }
+    });
   }
 }
 
