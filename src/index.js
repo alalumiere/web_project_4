@@ -46,6 +46,7 @@ editFormValidator.enableValidation();
 addFormValidator.enableValidation();
 
 // Open and Close popups
+
 // const editPopup = new PopupWithForm(".popup_type_edit-profile");
 // const addCardPopup = new PopupWithForm(".popup_type_add-element");
 // const imageModal = new PopupWithImage(".popup_type_image");
@@ -53,6 +54,7 @@ addFormValidator.enableValidation();
 // editPopup.setEventListeners();
 // addCardPopup.setEventListeners();
 // imageModal.setEventListeners();
+
 const initialCards = [
   {
     name: "Minnewaska",
@@ -172,4 +174,5 @@ const newSection = new Section(
 
 //   closeModal(addElementForm);
 // });
+
 newSection.renderer();

@@ -9,14 +9,17 @@ class Card {
   _getCardTemplate() {
     const elementTemplate = document
       .querySelector(this._elementSelector)
+
       .content.querySelector(".element__card")
       .cloneNode(true);
     console.log(elementTemplate);
+
     return elementTemplate;
   }
 
   _handleLikeIcon = () => {
     const elementLikeButton = this._card.querySelector(".element__like-button");
+
     elementLikeButton.classList.toggle(".element__like-button_filled");
   };
 
@@ -35,6 +38,7 @@ class Card {
   generateCard() {
     this._card = this._getCardTemplate();
     console.log(this._card);
+
     const elementImage = this._card.querySelector(".element__img");
     const elementTitle = this._card.querySelector(".element__title");
 
