@@ -11,7 +11,7 @@ class Card {
       .querySelector(this._elementSelector)
 
       .content.querySelector(".element__card")
-      .cloneNode(true);
+    // .cloneNode(true);
 
 
     return elementTemplate;
@@ -30,13 +30,13 @@ class Card {
       ".element__delete-button"
     );
 
-    elementImage.addEventListener("click", () => this._handleCardClick());
+    elementImage.addEventListener("click", () => this._handleCardClick);
     elementLikeButton.addEventListener("click", this._handleLikeIcon);
-    elementDeleteButton.addEventListener("click", this._handelDeleteCard);
+    elementDeleteButton.addEventListener("click", () => this._handelDeleteCard);
   }
 
   generateCard() {
-    this._card = this._getCardTemplate();
+    this._card = this._getCardTemplate().cloneNode(true);
 
     const elementImage = this._card.querySelector(".element__img");
     const elementTitle = this._card.querySelector(".element__title");
