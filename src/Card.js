@@ -30,7 +30,7 @@ class Card {
       ".element__delete-button"
     );
 
-    elementImage.addEventListener("click", () => this._handleCardClick);
+    elementImage.addEventListener("click", () => this._handleCardClick().open(data));
     elementLikeButton.addEventListener("click", this._handleLikeIcon);
     elementDeleteButton.addEventListener("click", () => this._handelDeleteCard);
   }

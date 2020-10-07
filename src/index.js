@@ -4,11 +4,15 @@ import Card from "./Card.js";
 import PopupWithForm from "./PopupWithForm.js";
 import PopupWithImage from "./PopupWithImage.js";
 import Section from "./Section.js";
-
+import UserInfo from "./UserInfo.js";
 
 const list = document.querySelector(".element");
 
 const forms = [...document.querySelectorAll(".popup__form")];
+
+const editUserInfo = new UserInfo()
+
+
 
 forms.forEach((form) => {
   const validatedForm = new FormValidator(
@@ -37,6 +41,21 @@ const imageModal = new PopupWithImage(".popup_type_image");
 editPopup.setEventListeners();
 addCardPopup.setEventListeners();
 imageModal.setEventListeners();
+
+
+const profileEditButton = document.querySelector('.profile__edit-button');
+const profileAddButton = document.querySelector('.profile__add-button');
+
+// const profileCloseButton = editProfileModal.querySelector('.popup__close-button');
+
+
+profileEditButton.addEventListener("click", () => {
+  editPopup.open();
+})
+
+profileAddButton.addEventListener("click", () => {
+  addCardPopup.open();
+})
 
 const initialCards = [
   {
@@ -73,6 +92,10 @@ const newSection = new Section(
       const cardElement = card.generateCard();
       newSection.addItem(cardElement);
     },
+    handleCardClick: (data) => {
+      imageModal.open(data);
+    },
+
   },
   list
 );
