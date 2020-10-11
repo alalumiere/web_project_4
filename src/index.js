@@ -5,14 +5,13 @@ import PopupWithForm from "./PopupWithForm.js";
 import PopupWithImage from "./PopupWithImage.js";
 import Section from "./Section.js";
 import UserInfo from "./UserInfo.js";
+import { data } from "autoprefixer";
 
 const list = document.querySelector(".element");
 
 const forms = [...document.querySelectorAll(".popup__form")];
 
-const editUserInfo = new UserInfo()
-
-
+const editUserInfo = new UserInfo();
 
 forms.forEach((form) => {
   const validatedForm = new FormValidator(
@@ -29,10 +28,15 @@ forms.forEach((form) => {
   validatedForm.enableValidation();
 });
 
-// Open and Close popups
 const editPopup = new PopupWithForm({
   popupSelector: ".popup_type_edit-profile",
+  formSubmit: (input) => {
+    input.forms;
+    input.editUserInfo;
+  },
 });
+
+// Open and Close popups
 const addCardPopup = new PopupWithForm({
   popupSelector: ".popup_type_add-element",
 });
@@ -42,20 +46,16 @@ editPopup.setEventListeners();
 addCardPopup.setEventListeners();
 imageModal.setEventListeners();
 
-
-const profileEditButton = document.querySelector('.profile__edit-button');
-const profileAddButton = document.querySelector('.profile__add-button');
-
-// const profileCloseButton = editProfileModal.querySelector('.popup__close-button');
-
+const profileEditButton = document.querySelector(".profile__edit-button");
+const profileAddButton = document.querySelector(".profile__add-button");
 
 profileEditButton.addEventListener("click", () => {
   editPopup.open();
-})
+});
 
 profileAddButton.addEventListener("click", () => {
   addCardPopup.open();
-})
+});
 
 const initialCards = [
   {
@@ -88,15 +88,15 @@ const newSection = new Section(
   {
     items: initialCards,
     renderer: (item) => {
-      const card = new Card(item, ".element__template");
+      const card = new Card(item, ".element__template", handleCardClick);
       const cardElement = card.generateCard();
       newSection.addItem(cardElement);
+      function handleCardClick() {
+        imageModal.open(card._link, card._name);
+      }
     },
-    handleCardClick: (data) => {
-      imageModal.open(data);
-    },
-
   },
+
   list
 );
 

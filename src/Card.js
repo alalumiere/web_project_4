@@ -1,3 +1,5 @@
+import { bind } from "file-loader";
+
 class Card {
   constructor(data, elementSelector, handleCardClick) {
     this._name = data.name;
@@ -10,9 +12,8 @@ class Card {
     const elementTemplate = document
       .querySelector(this._elementSelector)
 
-      .content.querySelector(".element__card")
+      .content.querySelector(".element__card");
     // .cloneNode(true);
-
 
     return elementTemplate;
   }
@@ -30,7 +31,7 @@ class Card {
       ".element__delete-button"
     );
 
-    elementImage.addEventListener("click", () => this._handleCardClick().open(data));
+    elementImage.addEventListener("click", () => this._handleCardClick());
     elementLikeButton.addEventListener("click", this._handleLikeIcon);
     elementDeleteButton.addEventListener("click", () => this._handelDeleteCard);
   }
